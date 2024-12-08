@@ -44,6 +44,23 @@ def delete_book(id: int):
         books = [x for x in books if x["id"] != id]
         return jsonify(books),200
 
+# update book
+@app.route("/api/book/update/<int:id>/", methods=["PUT"])
+def update_book(id: int):
+    try:
+        data = json.loads(request.data) 
+    except json.JSONDecodeError as e:
+        return jsonify({"error": "Invalid JSON data", "message": str(e)}), 400
+            
+    for i in books:
+        if i["id"] == id:
+            _index = books.index(i)
+            books[_index] = data
+
+            return jsonify(books), 200
+    return "book not found"
+        
+
 
 if __name__ == "__main__":
     app.run(debug=True)
