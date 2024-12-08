@@ -42,7 +42,9 @@
         - Run `cd .. && cd ..` and hit enter
     - clone the repo from git into your current directory
         - In the command prompt or powershell terminal paste the following `git clone ` and hit enter
-    - Change directory into the project folder (library) and Run `py api.py` in your terminal.
+    - Change directory into the project folder (library) and Run `py install -r requirements.txt` in your terminal to install necessary packages
+    - Run `py api.py` in your terminal  to run server
+    - Also to run test type `pytest tests/` in your terminal
 
 - MacOS
     - Install Python and Pip
@@ -63,3 +65,4 @@
     - clone the repo from git into your current directory
         - In the terminal paste the following `git clone ` and hit enter
     - Change directory into the project folder (library) and Run `python3 api.py` in your terminal.
+    - Also to run test type `pytest tests/` in your terminal
