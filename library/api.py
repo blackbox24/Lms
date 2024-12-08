@@ -66,15 +66,15 @@ def update_book(id: int):
 def get_members():
     return jsonify(members)
 
-@app.route("/api/members/<int:id>/", methods=["GET"])
-def get_book_by_id(id: int):
+@app.route("/api/member/<int:id>/", methods=["GET"])
+def get_member_by_id(id: int):
     member = next((b for b in members if b["id"] == id), None)
     if member:
         return jsonify(member)
     return jsonify({"error": "Book does not exist"}), 404
 
-@app.route("/api/book/add/", methods=["POST"])
-def add_book():
+@app.route("/api/member/add/", methods=["POST"])
+def add_member():
     try:
         data = json.loads(request.data)
     except json.JSONDecodeError as e:
