@@ -38,11 +38,11 @@
     python3 -m venv myprojectenv
     source myprojectenv/bin/activate
     ```
+    - clone the repo from git into your current directory
+        - In the terminal paste the following `git clone https://github.com/blackbox24/Lms.git ` and hit enter
     - Install Packages
     ```bash
     pip install -r requirements.txt
     ```
-    - clone the repo from git into your current directory
-        - In the terminal paste the following `git clone https://github.com/blackbox24/Lms.git ` and hit enter
     - Change directory into the project folder (library) and Run `python3 api.py` in your terminal.
     - Also to run test type `pytest tests/` in your terminal
